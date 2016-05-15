@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
 
-* System dependencies
+  ruby-2.3.1
 
-* Configuration
+* Rails version
+  
+  4.2.4
 
-* Database creation
+* Database
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+  PostgreSQL - 9.5.3
 
 * Deployment instructions
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  1. Clone this project
+  2. Set up database
+  3. Use rake task rates:import to fetch and import new data from remote host. Each time when you run it, you can see the log of this task and know how things is going.
+  4. Use rake task rates:convert[amount,data] (ex. rates:convert[12,'2001-12-23']) to get rate for specific date
