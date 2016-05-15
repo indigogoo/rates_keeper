@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: rates_keeper_development
+
+test:
+  <<: *default
+  database: rates_keeper_test
+
+production:
+  <<: *default
+  database: rates_keeper_production
+  username: rates_keeper
+  password: <%= ENV['RATES_KEEPER_DATABASE_PASSWORD'] %>
